@@ -4,6 +4,14 @@
              xmlns:local="clr-namespace:FinalProject"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ButtonTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+        
+        
     </Application.Resources>
 </Application>

@@ -1,0 +1,39 @@
+﻿<Window x:Class="FinalProject.Instructions"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FinalProject"
+        mc:Ignorable="d"
+        Title="Instructions" Height="450" Width="800"
+        AllowsTransparency="True"
+        Background="Transparent"
+        WindowStyle="None"
+        ResizeMode="NoResize">
+    <Grid>
+        <Border CornerRadius="10" Grid.RowSpan="2">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#2dd838" Offset="0.0"/>
+                    <GradientStop Color="#74f6e8" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+        <StackPanel VerticalAlignment="Top" Margin="40">
+            <TextBlock Text="INSTRUCTIONS" FontWeight="Light" FontFamily="Helvetica" HorizontalAlignment="Center" FontSize="33" Foreground="White"/>
+        </StackPanel>
+
+        <StackPanel VerticalAlignment="Center">
+            <TextBlock Text="How to play:" FontWeight="Light" FontFamily="Helvetica" HorizontalAlignment="Center" FontSize="20" Foreground="White"/>
+            <TextBlock Text=" - A 2 Player game Consisting of having the choice of X or O" FontWeight="Light" FontFamily="Helvetica" HorizontalAlignment="Center" FontSize="20" Foreground="White"/>
+            <TextBlock Text="- If any of the players succesfully complete a row or col with their selected choice wins" FontWeight="Light" FontFamily="Helvetica" HorizontalAlignment="Center" FontSize="20" Foreground="White"/>
+            <TextBlock Text="- The game will turn orange if it is a draw" FontWeight="Light" FontFamily="Helvetica" HorizontalAlignment="Center" FontSize="20" Foreground="White"/>
+            <TextBlock Text="The game keeps looping and  your score will be added to your account" FontWeight="Light" FontFamily="Helvetica" HorizontalAlignment="Center" FontSize="20" Foreground="White"/>
+            <TextBlock Text=" GOOD LUCK!" FontWeight="Light" FontFamily="Helvetica" HorizontalAlignment="Center" FontSize="40" Foreground="White" Margin="20"/>
+        </StackPanel>
+        <StackPanel>
+            <Button x:Name="HomeBtn" Width="100" Height="30" Content="Back" HorizontalAlignment="Left" Margin="20,20,0,0" Click="Home_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

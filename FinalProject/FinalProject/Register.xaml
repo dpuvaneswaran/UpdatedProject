@@ -1,0 +1,69 @@
+﻿<Window x:Class="FinalProject.Register"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FinalProject"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        mc:Ignorable="d"
+        Title="Register" Height="450" Width="380"
+        AllowsTransparency="True"
+        Background="Transparent"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        MouseDown="Window_MouseDown">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Border CornerRadius="10" Grid.RowSpan="2">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#0ee3f1" Offset="0.2"/>
+                        <GradientStop Color="#63ff00" Offset="1.2"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+
+            <StackPanel>
+                <Button x:Name="Homebutton" Width="100" Height="35" Content="HOME" Margin="0,20,0,0" Click="HomeButton_Click"></Button>
+            </StackPanel>
+
+            <StackPanel VerticalAlignment="Center">
+                <Image Source="Images/Icon.png" Width="70"/>
+                <TextBlock Text="REGISTERATION FORM" FontWeight="Light" FontFamily="Helvetica" FontSize="22" Foreground="White" HorizontalAlignment="Center"/>
+
+            </StackPanel>
+            
+            <TextBlock FontFamily="Helvetica" x:Name ="ErrorMessage" HorizontalAlignment="Center" Height="20" Width="198" Margin="0,150,0,0" VerticalAlignment="Top" OpacityMask="Crimson" Foreground="#FFE5572C"/>
+            
+            <StackPanel Grid.Row="1">
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="registerUsername" FontFamily="Helvetica" FontWeight="Light" Text="Username" FontSize="20" HorizontalAlignment="Center" Foreground="White" Background="Transparent" BorderThickness="0" Width="235" HorizontalContentAlignment="Left" Opacity="0.9" Margin="63,0,0,0"/>
+                    <iconPacks:PackIconMaterial Kind="Account" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White"/>
+                </StackPanel>
+                <Border Width="250" Height="2" Background="White" Opacity="0.5"/>
+
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                    <PasswordBox x:Name="registerPassword" FontFamily="Helvetica" FontWeight="Light" Password="Password" FontSize="20" HorizontalAlignment="Center" Foreground="White" Background="Transparent" BorderThickness="0" Width="235" HorizontalContentAlignment="Left" Opacity="0.9" Margin="63,0,0,0"/>
+                    <iconPacks:PackIconMaterial Kind="TextboxPassword" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White"/>
+                </StackPanel>
+                <Border Width="250" Height="2" Background="White" Opacity="0.5"/>
+
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                    <PasswordBox x:Name="RetypePassword" FontFamily="Helvetica" FontWeight="Light" Password="Password" FontSize="20" HorizontalAlignment="Center" Foreground="White" Background="Transparent" BorderThickness="0" Width="235" HorizontalContentAlignment="Left" Opacity="0.9" Margin="63,0,0,0"/>
+                    <iconPacks:PackIconMaterial Kind="TextboxPassword" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White"/>
+                </StackPanel>
+                <Border Width="250" Height="2" Background="White" Opacity="0.5"/>
+
+                <StackPanel>
+                    <Button Width="100" Height="35" Content="REGISTER" Margin="0,20,0,0" Click="RegisterButton2_Click"></Button>
+                </StackPanel>
+                
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

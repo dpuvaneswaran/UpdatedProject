@@ -6,6 +6,26 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "EO.Pdf/20.0.81": {
+        "runtime": {
+          "lib/EO.Base.dll": {
+            "assemblyVersion": "20.0.81.0",
+            "fileVersion": "20.0.81.0"
+          },
+          "lib/EO.Pdf.dll": {
+            "assemblyVersion": "20.0.81.0",
+            "fileVersion": "20.0.81.0"
+          },
+          "lib/EO.WebBrowser.dll": {
+            "assemblyVersion": "20.0.81.0",
+            "fileVersion": "20.0.81.0"
+          },
+          "lib/EO.WebEngine.dll": {
+            "assemblyVersion": "20.0.81.0",
+            "fileVersion": "20.0.81.0"
+          }
+        }
+      },
       "MahApps.Metro.IconPacks.Material/3.4.0": {
         "runtime": {
           "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Core.dll": {
@@ -399,6 +419,14 @@
             "rid": "win-x86",
             "assetType": "native",
             "fileVersion": "4.6.25512.1"
+          }
+        }
+      },
+      "Sitecore.FakeDb/2.0.1": {
+        "runtime": {
+          "lib/net471/Sitecore.FakeDb.dll": {
+            "assemblyVersion": "2.0.1.0",
+            "fileVersion": "2.0.1.0"
           }
         }
       },
@@ -1338,6 +1366,13 @@
     }
   },
   "libraries": {
+    "EO.Pdf/20.0.81": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iHW9z1PfNyWAMRHddXn0agfqEPw8fMJiw4pfsejwvUb6gGwpQ9X0GjBC8oTqWeFDkTZ/qq9d6DAkqb9i8uo0cw==",
+      "path": "eo.pdf/20.0.81",
+      "hashPath": "eo.pdf.20.0.81.nupkg.sha512"
+    },
     "MahApps.Metro.IconPacks.Material/3.4.0": {
       "type": "package",
       "serviceable": true,
@@ -1603,6 +1638,13 @@
       "sha512": "sha512-YhEdSQUsTx+C8m8Bw7ar5/VesXvCFMItyZF7G1AUY+OM0VPZUOeAVpJ4Wl6fydBGUYZxojTDR3I6Bj/+BPkJNA==",
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "hashPath": "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
+    },
+    "Sitecore.FakeDb/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-O12Ob0aM6juOaIBARnljS2TfvqyVZYdWN00mK+IajcvF3y2r5zWeUgTbltpCpSY/YjElIBXM5zZjJr2eeRB4HA==",
+      "path": "sitecore.fakedb/2.0.1",
+      "hashPath": "sitecore.fakedb.2.0.1.nupkg.sha512"
     },
     "SQLitePCLRaw.bundle_e_sqlite3/2.0.2": {
       "type": "package",

@@ -2,6 +2,21 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "EO.Pdf/20.0.81": {
+        "type": "package",
+        "compile": {
+          "lib/EO.Base.dll": {},
+          "lib/EO.Pdf.dll": {},
+          "lib/EO.WebBrowser.dll": {},
+          "lib/EO.WebEngine.dll": {}
+        },
+        "runtime": {
+          "lib/EO.Base.dll": {},
+          "lib/EO.Pdf.dll": {},
+          "lib/EO.WebBrowser.dll": {},
+          "lib/EO.WebEngine.dll": {}
+        }
+      },
       "MahApps.Metro.IconPacks.Material/3.4.0": {
         "type": "package",
         "compile": {
@@ -471,6 +486,15 @@
             "assetType": "native",
             "rid": "win-x86"
           }
+        }
+      },
+      "Sitecore.FakeDb/2.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net471/Sitecore.FakeDb.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.FakeDb.dll": {}
         }
       },
       "SQLitePCLRaw.bundle_e_sqlite3/2.0.2": {
@@ -1508,6 +1532,27 @@
     }
   },
   "libraries": {
+    "EO.Pdf/20.0.81": {
+      "sha512": "iHW9z1PfNyWAMRHddXn0agfqEPw8fMJiw4pfsejwvUb6gGwpQ9X0GjBC8oTqWeFDkTZ/qq9d6DAkqb9i8uo0cw==",
+      "type": "package",
+      "path": "eo.pdf/20.0.81",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "eo.pdf.20.0.81.nupkg.sha512",
+        "eo.pdf.nuspec",
+        "lib/EO.Base.dll",
+        "lib/EO.Base.xml",
+        "lib/EO.Pdf.dll",
+        "lib/EO.Pdf.xml",
+        "lib/EO.WebBrowser.dll",
+        "lib/EO.WebBrowser.xml",
+        "lib/EO.WebEngine.dll",
+        "lib/EO.WebEngine.xml",
+        "lib/GACTools.exe",
+        "lib/eowp.exe"
+      ]
+    },
     "MahApps.Metro.IconPacks.Material/3.4.0": {
       "sha512": "V0RkFK2pKMnQ4cpX5ADi5B7WIzcP0EvgXbS0TGVUm6AbiR+MnU91iQpQm3np3q9kb5QDMC/WerfiBUnI97IRDQ==",
       "type": "package",
@@ -2302,6 +2347,20 @@
         "runtimes/win-x86/native/sni.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Sitecore.FakeDb/2.0.1": {
+      "sha512": "O12Ob0aM6juOaIBARnljS2TfvqyVZYdWN00mK+IajcvF3y2r5zWeUgTbltpCpSY/YjElIBXM5zZjJr2eeRB4HA==",
+      "type": "package",
+      "path": "sitecore.fakedb/2.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/App.config",
+        "lib/net471/Sitecore.FakeDb.XML",
+        "lib/net471/Sitecore.FakeDb.dll",
+        "sitecore.fakedb.2.0.1.nupkg.sha512",
+        "sitecore.fakedb.nuspec"
       ]
     },
     "SQLitePCLRaw.bundle_e_sqlite3/2.0.2": {
@@ -5544,12 +5603,14 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "EO.Pdf >= 20.0.81",
       "MahApps.Metro.IconPacks.Material >= 3.4.0",
       "Microsoft.EntityFrameworkCore >= 3.1.2",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.2",
       "Microsoft.EntityFrameworkCore.Sqlite >= 3.1.2",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.2",
       "Microsoft.Exchange.WebServices >= 2.2.0",
+      "Sitecore.FakeDb >= 2.0.1",
       "System.Data.SqlClient >= 4.8.1"
     ]
   },
@@ -5594,6 +5655,10 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
+          "EO.Pdf": {
+            "target": "Package",
+            "version": "[20.0.81, )"
+          },
           "MahApps.Metro.IconPacks.Material": {
             "target": "Package",
             "version": "[3.4.0, )"
@@ -5619,6 +5684,10 @@
           "Microsoft.Exchange.WebServices": {
             "target": "Package",
             "version": "[2.2.0, )"
+          },
+          "Sitecore.FakeDb": {
+            "target": "Package",
+            "version": "[2.0.1, )"
           },
           "System.Data.SqlClient": {
             "target": "Package",
@@ -5652,8 +5721,28 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
+      "message": "Package 'EO.Pdf 20.0.81' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "EO.Pdf",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
       "message": "Package 'Microsoft.Exchange.WebServices 2.2.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
       "libraryId": "Microsoft.Exchange.WebServices",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Sitecore.FakeDb 2.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Sitecore.FakeDb",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
       ]

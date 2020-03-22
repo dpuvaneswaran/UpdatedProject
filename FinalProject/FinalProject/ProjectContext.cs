@@ -13,8 +13,8 @@ namespace FinalProject
         public ProjectContext(DbContextOptions<ProjectContext> options)
             : base(options)
         {
-        }
 
+        }
         public virtual DbSet<AppUsers> AppUsers { get; set; }
         public virtual DbSet<Highscores> Highscores { get; set; }
 

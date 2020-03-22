@@ -9,7 +9,12 @@ namespace FinalProject.Database_Model
     {
         public class Highscores
 
+           
         {
+
+            private List<Highscores> hs;
+
+
             //App Users Table Attributes
             public int HighscoreID { get; set; }
             public string Username { get; set; }
@@ -20,6 +25,11 @@ namespace FinalProject.Database_Model
 
             public List<HighscoresList> HighScore { get; } = new List<HighscoresList>();
 
+
+            public override string ToString()
+            {
+                return $"{Username} {Score}";
+            }
         }
 
 

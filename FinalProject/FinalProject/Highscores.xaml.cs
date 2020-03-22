@@ -34,30 +34,36 @@ namespace FinalProject
 
         }
 
+        ProjectContext pd = new ProjectContext();
         private void View_Click(object sender, RoutedEventArgs e)
         {
             {
 
+/*                using (var db = new ProjectContext())
+                {
+                    var highscores = 
+                    
+                        (from highscore in db.Highscores
+                         select highscore).ToList();
+                }*/
+
+                            
+                               //Setting the SQL Credentials
+                               SqlConnection conn = new SqlConnection("Data Source = localhost;" + "Initial Catalog = Project;" + "User ID = SA;" + "Password= Passw0rd2018;");
 
 
+                               //Using Data Manipulative Language to Query
+                               SqlCommand cmd = new SqlCommand("SELECT HighscoreID, Username, Score " + "FROM Highscores", conn);
 
-                /*
-                //Setting the SQL Credentials
-                SqlConnection conn = new SqlConnection("Data Source = localhost;" + "Initial Catalog = Project;" + "User ID = SA;" + "Password= Passw0rd2018;");
+                               SqlDataAdapter adapter = new SqlDataAdapter();
+                               conn.Open();
+                               DataTable dt = new DataTable();
+                               dt.Load(cmd.ExecuteReader());
 
+                
+                               conn.Close();
 
-                //Using Data Manipulative Language to Query
-                SqlCommand cmd = new SqlCommand("SELECT HighscoreID, Username, Score " + "FROM Highscores", conn);
-
-                SqlDataAdapter adapter = new SqlDataAdapter();
-                conn.Open();
-                DataTable dt = new DataTable();
-                dt.Load(cmd.ExecuteReader());
-
-
-                conn.Close();
-
-                HighscoresTbl.DataContext = dt;*/
+                               HighscoresTbl.DataContext = dt;
             }
 
         }

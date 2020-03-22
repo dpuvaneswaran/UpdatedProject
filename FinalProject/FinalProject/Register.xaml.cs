@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using System.Linq;
 using System.Data.SqlClient;
 using System.Data;
@@ -58,7 +53,7 @@ namespace FinalProject
             else if (RetypePassword.Password.Length == 0)
             {
                 ErrorMessage.Text = "Please confirm your password";
-                registerPassword.Focus();
+                RetypePassword.Focus();
             }
 
             else if (registerPassword.Password != RetypePassword.Password)
@@ -72,23 +67,34 @@ namespace FinalProject
             {
                 ErrorMessage.Text = "";
 
-                //Set SQL Credentials
-                SqlConnection connection = new SqlConnection("Data Source = localhost;" + "Initial Catalog = Project;" + "User ID = SA;" + "Password= Passw0rd2018;");
 
-                //Open New SQL Connection
-                connection.Open();
+                /*//Setting the SQL Credentials
+                SqlConnection conn = new SqlConnection("Data Source = localhost;" + "Initial Catalog = Project;" + "User ID = SA;" + "Password= Passw0rd2018;");
+                conn.Open();
 
-                //SQL DML Query
-                SqlCommand command = new SqlCommand("INSERT INTO AppUsers " + "(Username, Password) " + "VALUES('" + username + "','" + password + "')", connection);
+                //Using Data Manipulative Language to Query
+                SqlCommand cmd = new SqlCommand("INSERT Username, Password " + "FROM AppUsers", conn);
 
                 SqlDataAdapter adapter = new SqlDataAdapter();
-                adapter.InsertCommand = command;
-                DataSet dataSet = new DataSet();
-                adapter.Fill(dataSet);
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());*/
 
+
+
+                   //Set SQL Credentials
+                   SqlConnection connection = new SqlConnection("Data Source = localhost;" + "Initial Catalog = Project;" + "User ID = SA;" + "Password= Passw0rd2018;");
+
+                   //Open New SQL Connection
+                   connection.Open();
+
+                   //SQL DML Query
+                   SqlCommand command = new SqlCommand("INSERT INTO AppUsers " + "(Username, Password) " + 
+                                                       "VALUES('" + username + "','" + password + "')", connection);
+
+                connection.Close();
+                this.Close();
                 MainWindow registered = new MainWindow();
                 registered.Show();
-                this.Close();
             }
         }
     }

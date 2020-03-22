@@ -57,7 +57,7 @@ namespace FinalProject
                         if (usernameLogin == userLogs.Username && usernamePassword == userLogs.Password)
 
                         {
-                            this.Close();
+                            
                             WelcomeMenu LoginWindow = new WelcomeMenu();
                             LoginWindow.Show();
                         }

@@ -34,12 +34,11 @@ namespace FinalProject
 
         }
 
-        ProjectContext pd = new ProjectContext();
         private void View_Click(object sender, RoutedEventArgs e)
         {
             {
 
-/*                using (var db = new ProjectContext())
+                /*using (var db = new ProjectContext())
                 {
                     var highscores = 
                     
@@ -48,7 +47,7 @@ namespace FinalProject
                 }*/
 
                             
-                               //Setting the SQL Credentials
+                               /*//Setting the SQL Credentials
                                SqlConnection conn = new SqlConnection("Data Source = localhost;" + "Initial Catalog = Project;" + "User ID = SA;" + "Password= Passw0rd2018;");
 
 
@@ -63,7 +62,7 @@ namespace FinalProject
                 
                                conn.Close();
 
-                               HighscoresTbl.DataContext = dt;
+                               HighscoresTbl.DataContext = dt;*/
             }
 
         }

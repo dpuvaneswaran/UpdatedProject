@@ -7,6 +7,7 @@ using System.Windows.Input;
 using System.Linq;
 using System.Data.SqlClient;
 using System.Data;
+using System.Collections.Generic;
 
 namespace FinalProject
 {
@@ -35,12 +36,24 @@ namespace FinalProject
             this.Close();
         }
 
+
+        ProjectContext project = new ProjectContext();
+
         private void RegisterButton2_Click(object sender, RoutedEventArgs e)
         {
             //User Textbox Input Fields
 
             string username = registerUsername.Text;
             string password = registerPassword.Password;
+            AppUsers InsertRegData = new AppUsers();
+            List<AppUsers> RegQuery;
+            using (var db = new ProjectContext())
+
+            {
+                RegQuery =
+                (from userReg in db.AppUsers
+                 select userReg).ToList();
+            }
 
             //Password Parameters
             if (registerPassword.Password.Length == 0)
@@ -62,11 +75,29 @@ namespace FinalProject
                 RetypePassword.Focus();
             }
 
+           
             //SQL Database Entry
             else
             {
-                ErrorMessage.Text = "";
+                if(username == registerUsername.Text && password == registerPassword.Password)   
 
+                {
+
+                    InsertRegData.Username = username;
+                    InsertRegData.Password = password;
+
+                    using (var db = new ProjectContext())
+
+                    {
+                        db.AppUsers.Add(InsertRegData);
+                        db.SaveChanges();
+
+                        MainWindow loginwindow = new MainWindow();
+                        ErrorMessage.Text = "You have successfully registered!";
+                        this.Close();
+
+                    }
+                }
 
                 /*//Setting the SQL Credentials
                 SqlConnection conn = new SqlConnection("Data Source = localhost;" + "Initial Catalog = Project;" + "User ID = SA;" + "Password= Passw0rd2018;");
@@ -81,20 +112,19 @@ namespace FinalProject
 
 
 
-                   //Set SQL Credentials
-                   SqlConnection connection = new SqlConnection("Data Source = localhost;" + "Initial Catalog = Project;" + "User ID = SA;" + "Password= Passw0rd2018;");
+                /*//Set SQL Credentials
+                SqlConnection connection = new SqlConnection("Data Source = localhost;" + "Initial Catalog = Project;" + "User ID = SA;" + "Password= Passw0rd2018;");
 
-                   //Open New SQL Connection
-                   connection.Open();
+                //Open New SQL Connection
+                connection.Open();
 
-                   //SQL DML Query
-                   SqlCommand command = new SqlCommand("INSERT INTO AppUsers " + "(Username, Password) " + 
-                                                       "VALUES('" + username + "','" + password + "')", connection);
+                //SQL DML Query
+                SqlCommand command = new SqlCommand("INSERT INTO AppUsers " + "(Username, Password) " + 
+                                                    "VALUES('" + username + "','" + password + "')", connection);
 
-                connection.Close();
                 this.Close();
                 MainWindow registered = new MainWindow();
-                registered.Show();
+                registered.Show();*/
             }
         }
     }

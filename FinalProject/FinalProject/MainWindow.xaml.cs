@@ -72,9 +72,7 @@ namespace FinalProject
 
 
 
-                /*          // ATTEMPTED LINQ COMMAND
-                            ProjectContext pd = new ProjectContext();
-                            var user = (from s in dbo.AppUsers where s.Username == UsernameTxt.Text select s).First();*//*
+                /*          
 
 
 

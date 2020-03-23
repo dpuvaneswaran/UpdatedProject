@@ -88,3 +88,4 @@ C:\Users\TECH-W154birm\Documents\GameProject\FinalProject\FinalProject\obj\Debug
 C:\Users\TECH-W154birm\Documents\GameProject\FinalProject\FinalProject\obj\Debug\netcoreapp3.1\FinalProject.csproj.CopyComplete
 C:\Users\TECH-W154birm\Documents\GameProject\FinalProject\FinalProject\obj\Debug\netcoreapp3.1\FinalProject.dll
 C:\Users\TECH-W154birm\Documents\GameProject\FinalProject\FinalProject\obj\Debug\netcoreapp3.1\FinalProject.pdb
+C:\Users\TECH-W154birm\Documents\GameProject\FinalProject\FinalProject\obj\Debug\netcoreapp3.1\FinalProject.csprojAssemblyReference.cache

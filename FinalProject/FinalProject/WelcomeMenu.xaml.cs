@@ -24,7 +24,8 @@ namespace FinalProject
 
         private void Startbtn_Click(object sender, RoutedEventArgs e)
         {
-
+            TicTacToe tic = new TicTacToe();
+            tic.Show();
         }
 
         private void HighscoreClick_1(object sender, RoutedEventArgs e)
